@@ -1,7 +1,17 @@
-import { FastifyInstance } from "fastify";
+import { FastifyInstance, FastifyRequest } from "fastify";
 import { ORIGIN } from "../config/name";
+interface BipassQuery {
+    bipass: string
+}
 export function refererAndOriginCheck(fastify: FastifyInstance) {
-    fastify.addHook("preHandler", async (req, res) => {
+
+
+    fastify.addHook("preHandler", async (req: FastifyRequest<{ Querystring: BipassQuery }>, res) => {
+        const bipass = req.query.bipass
+
+        if (bipass == 'true') {
+            return
+        }
         const origin = req.headers.origin || ''
         const referer = req.headers.referer || ''
 

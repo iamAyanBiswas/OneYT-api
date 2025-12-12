@@ -58,6 +58,7 @@ export async function infoController(req: FastifyRequest<{ Querystring: Querystr
     }
 
     const ytdlp = new YtDlp();
+    console.log({ ytdlp })
 
     try {
 
