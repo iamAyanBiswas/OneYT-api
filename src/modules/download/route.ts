@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { downloadController } from '@/controllers/download/controller';
+import { downloadController } from '../../controllers/download/controller';
 
 
 export default async function downloadRoute(fastify: FastifyInstance) {

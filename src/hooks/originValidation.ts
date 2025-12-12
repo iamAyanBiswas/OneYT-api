@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { ORIGIN } from "@/config/name";
+import { ORIGIN } from "../config/name";
 export function refererAndOriginCheck(fastify: FastifyInstance) {
     fastify.addHook("preHandler", async (req, res) => {
         const origin = req.headers.origin || ''

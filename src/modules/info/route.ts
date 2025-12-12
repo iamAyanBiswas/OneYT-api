@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { infoController } from '@/controllers/info/controller';
+import { infoController } from '../../controllers/info/controller';
 
 /**
  * Info Route

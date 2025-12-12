@@ -1,7 +1,7 @@
 
 import { YtDlp } from "ytdlp-nodejs";
-import { createToken } from "@/lib/token";
-import { getSafeVideoURL } from "@/lib/utils";
+import { createToken } from "../../lib/token";
+import { getSafeVideoURL } from "../../lib/utils";
 import { FastifyReply, FastifyRequest } from "fastify";
 
 

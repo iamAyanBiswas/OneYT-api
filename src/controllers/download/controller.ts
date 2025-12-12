@@ -1,8 +1,8 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { YtDlp } from 'ytdlp-nodejs';
 import { PassThrough, Readable } from 'stream';
-import { verifyToken } from '@/lib/token';
-import { getSafeVideoURL } from '@/lib/utils';
+import { verifyToken } from '../../lib/token';
+import { getSafeVideoURL } from '../../lib/utils';
 
 const qualitys: Quality[] = ['144p', '240p', '360p', '480p', '720p', '1080p', '1440p', '2160p']
 interface Querystring {
